@@ -1,0 +1,23 @@
+version: 17
+jobs:
+- name: build
+  jobExecutor: blog
+  steps:
+  - !CommandStep
+    name: build
+    runInContainer: false
+    interpreter: !DefaultInterpreter
+      commands:
+      - cd ~/app/blog
+      - git pull
+      - pnpm docs:build
+      - mv ~/app/blog/docs/.vitepress/dist ~/app/blog/public
+      - sudo nginx -s reload
+    useTTY: false
+    condition: ALL_PREVIOUS_STEPS_WERE_SUCCESSFUL
+  retryCondition: never
+  maxRetries: 3
+  retryDelay: 30
+  cpuRequirement: 250
+  memoryRequirement: 256
+  timeout: 3600
