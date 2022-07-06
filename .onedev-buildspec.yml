@@ -15,6 +15,14 @@ jobs:
       - sudo nginx -s reload
     useTTY: false
     condition: ALL_PREVIOUS_STEPS_WERE_SUCCESSFUL
+  - !PushRepository
+    name: no_idea/blog
+    remoteUrl: https://github.com/NoCreativeAndNoIdea/blog
+    userName: muziyan
+    passwordSecret: access-token
+    withLfs: false
+    force: false
+    condition: ALL_PREVIOUS_STEPS_WERE_SUCCESSFUL
   retryCondition: never
   maxRetries: 3
   retryDelay: 30
