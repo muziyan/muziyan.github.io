@@ -23,6 +23,11 @@ jobs:
     withLfs: false
     force: false
     condition: ALL_PREVIOUS_STEPS_WERE_SUCCESSFUL
+  triggers:
+  - !BranchUpdateTrigger
+    branches: main
+    paths: docs/**
+    projects: blog
   retryCondition: never
   maxRetries: 3
   retryDelay: 30
