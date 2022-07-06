@@ -7,7 +7,8 @@ export default {
     logo: '',
 
     nav: [
-      { text: 'Home', link: '/'}
+      { text: 'Home', link: '/'},
+      { text: 'Essay', link: '/essay/index', activeMatch: '/essay'}
     ],
     socialLinks: [
       {icon: 'github', link: 'https://github.com/NoCreativeAndNoIdea'}
