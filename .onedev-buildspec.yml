@@ -8,10 +8,10 @@ jobs:
     runInContainer: false
     interpreter: !DefaultInterpreter
       commands:
-      - cd ~/app/blog
+      - cd /home/ubuntu/app/blog
       - git pull
       - pnpm docs:build
-      - mv ~/app/blog/docs/.vitepress/dist ~/app/blog/public
+      - mv /home/ubuntu/app/blog/docs/.vitepress/dist /home/ubuntu/app/blog/public
       - sudo nginx -s reload
     useTTY: false
     condition: ALL_PREVIOUS_STEPS_WERE_SUCCESSFUL
