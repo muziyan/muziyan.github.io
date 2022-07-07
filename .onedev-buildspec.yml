@@ -13,7 +13,7 @@ jobs:
       - git config --global --add safe.directory /home/ubuntu/app/blog
       - git pull
       - pnpm docs:build
-      - mv /home/ubuntu/app/blog/docs/.vitepress/dist/ /home/ubuntu/app/blog/public/
+      - mv /home/ubuntu/app/blog/docs/.vitepress/dist /home/ubuntu/app/blog/public/
       - sudo nginx -s reload
     useTTY: false
     condition: ALL_PREVIOUS_STEPS_WERE_SUCCESSFUL
