@@ -9,6 +9,7 @@ jobs:
     interpreter: !DefaultInterpreter
       commands:
       - cd /home/ubuntu/app/blog
+      - 'git config --global --add safe.directory '
       - git pull
       - pnpm docs:build
       - mv /home/ubuntu/app/blog/docs/.vitepress/dist /home/ubuntu/app/blog/public
