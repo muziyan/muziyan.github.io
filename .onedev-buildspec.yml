@@ -25,7 +25,7 @@ jobs:
   triggers:
   - !BranchUpdateTrigger
     branches: main
-    paths: docs/**
+    paths: '**'
     projects: blog
   retryCondition: never
   maxRetries: 3
