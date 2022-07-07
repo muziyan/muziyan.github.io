@@ -8,7 +8,10 @@ jobs:
     runInContainer: false
     interpreter: !DefaultInterpreter
       commands:
-      - cd /home/ubuntu/app/blog && git pull
+      - export HOME=/home/ubuntu
+      - 'cd /home/ubuntu/app/blog '
+      - git config --global --add safe.directory /home/ubuntu/app/blog
+      - git pull
       - pnpm docs:build
       - mv /home/ubuntu/app/blog/docs/.vitepress/dist/ /home/ubuntu/app/blog/public/
       - sudo nginx -s reload
@@ -19,8 +22,8 @@ jobs:
     remoteUrl: https://github.com/NoCreativeAndNoIdea/blog
     userName: muziyan
     passwordSecret: access-token
-    withLfs: false
-    force: false
+    withLfs: true
+    force: true
     condition: ALL_PREVIOUS_STEPS_WERE_SUCCESSFUL
   triggers:
   - !BranchUpdateTrigger
