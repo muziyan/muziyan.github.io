@@ -1,6 +1,4 @@
-<img title="" src="file:///Users/season/Library/Application%20Support/marktext/images/2022-09-01-11-34-10-image.png" alt="" data-align="inline">
-
-# # 事件循环
+## 事件循环
 
 > 浏览器中`JavaScript`的执行机制和`NodeJs` 的机制都是基于事件循环,我们掌握事件循环才能更好的去编写代码.
 
