@@ -9,12 +9,7 @@ jobs:
     interpreter: !DefaultInterpreter
       commands:
       - export HOME=/home/ubuntu
-      - 'cd /home/ubuntu/app/blog '
-      - git config --global --add safe.directory /home/ubuntu/app/blog
-      - git pull
-      - pnpm docs:build
-      - mv /home/ubuntu/app/blog/docs/.vitepress/dist /home/ubuntu/app/blog/public/
-      - sudo nginx -s reload
+      - cd /home/ubuntu/app/blog && sh ./depoly.sh
     useTTY: false
     condition: ALL_PREVIOUS_STEPS_WERE_SUCCESSFUL
   - !PushRepository
