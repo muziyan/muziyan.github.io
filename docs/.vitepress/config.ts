@@ -8,8 +8,36 @@ export default {
 
     nav: [
       { text: 'Home', link: '/'},
-      { text: 'Essay', link: '/essay/index', activeMatch: '/essay'}
+      { text: 'Web', link: '/web/about', activeMenu: '/web'},
+      { text: 'Essay', link: '/essay/about', activeMenu: '/essay'},
     ],
+
+    sidebar: {
+      '/web/': [
+        {
+          text: '前端知识总结',
+          items: [
+            {
+              text: "About",
+              link: '/web/about',
+            }
+          ]
+        },
+        // {
+        //   text: 'Rollup',
+        //   items: [
+        //     { text: 'What is Rollup?', link: '/web/rollup/what-is-rollup' },
+        //   ]
+        // },
+        // {
+        //   text: 'Webpack',
+        //   items: [
+        //     {text: 'What is Webpack', link: '/web/webpack/what-is-webpack' },
+        //   ]
+        // }
+      ],
+    },
+
     socialLinks: [
       {icon: 'github', link: 'https://github.com/NoCreativeAndNoIdea'}
     ],
