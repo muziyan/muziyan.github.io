@@ -1,4 +1,5 @@
-## 事件循环
+![event-loop-process](/web/assets/event-loop-process.jpg)
+# 事件循环
 
 > 浏览器中`JavaScript`的执行机制和`NodeJs` 的机制都是基于事件循环,我们掌握事件循环才能更好的去编写代码.
 
