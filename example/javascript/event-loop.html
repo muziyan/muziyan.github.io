@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>event loop demo</title>
+</head>
+<body>
+
+  <!-- <script>
+    console.log("log 同步任务")
+
+    function fn(){
+      console.log("fn 函数同步任务")
+      setTimeout(() => {
+        console.log("函数内定时器，异步宏任务")
+      })
+    }
+
+    fn()
+
+    // new promise 是同步任务
+    const p1 = new Promise((res) => {
+      setTimeout(() => {
+        res("异步微任务")
+      })
+    })
+
+    // then 是异步微任务
+    p1.then((data) => {
+      console.log(data)
+    })
+
+    setTimeout(() => {
+      console.log("外部定时器，异步宏任务")
+    })
+
+    console.log("执行栈清空，调用回调队列!")
+
+  </script> -->
+
+  <script>
+    setTimeout(() => {
+      console.log("first")
+    })
+
+    new Promise((resolve) => {
+      resolve("two")
+    }).then(data => {
+      console.log(data)
+    }).finally(() => {
+      console.log("success!")
+    })
+
+    setTimeout(() => {
+      console.log("three")
+    })
+  </script>
+</body>
+</html>
