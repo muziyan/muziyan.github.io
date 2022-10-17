@@ -13,6 +13,12 @@ title: 前端知识总结
 - [事件机制](/web/javascript/event-mechanism) 待完善...   
 - [事件循环和微任务.](/web/javascript/event-loop) 待完善...
 
+<!-- ### React 
+- [状态管理:react-redux的原理](/web/react/reduct-source) 创作中 -->
+
+### 浏览器
+- [从浏览器导航栏输入`URL`到浏览器渲染的过程](/web/browser/browser-render) 待完善...
+
 <!-- ## 编译和打包工具
 > TODO
 
