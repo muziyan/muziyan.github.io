@@ -3,4 +3,4 @@ node_modules
 .vscode
 public
 pnpm-lock.yaml
-example/**/dist
+dist
