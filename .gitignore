@@ -1,6 +1,6 @@
 node_modules
-dist
 .idea
 .vscode
 public
 pnpm-lock.yaml
+example/**/dist

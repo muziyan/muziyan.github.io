@@ -16,6 +16,10 @@ title: 前端知识总结
 <!-- ### React 
 - [状态管理:react-redux的原理](/web/react/reduct-source) 创作中 -->
 
+<!-- ### Vue
+
+- [响应式数据设计](/web/vue/reactivity) 创作中... -->
+
 ### 浏览器
 - [从浏览器导航栏输入`URL`到浏览器渲染的过程](/web/browser/browser-render) 待完善...
 
